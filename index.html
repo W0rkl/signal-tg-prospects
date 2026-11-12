@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081322">
+  <meta name="description" content="небольшие telegram-каналы, конкретные идеи разработки и персональные сообщения для первого контакта.">
+  <title>signal — tg-клиенты</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c1c30'/%3E%3Cpath d='M14 40V30m12 18V19m12 24V14m12 18V24' stroke='%2379bcff' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">к списку каналов</a>
+  <aside class="sidebar">
+    <a class="brand" href="#" aria-label="signal — начало"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>signal<span class="brand-dot">.</span></a>
+    <div class="workspace-label">твой следующий проект</div>
+    <nav aria-label="рабочая область">
+      <span class="nav-heading">рабочая область</span>
+      <button class="nav-item active" data-view="all" aria-pressed="true"><span aria-hidden="true">▦</span> все каналы <b id="nav-count">—</b></button>
+      <button class="nav-item" data-view="saved" aria-pressed="false"><span aria-hidden="true">☆</span> избранное <b id="saved-count">0</b></button>
+      <button class="nav-item" data-view="contacted" aria-pressed="false"><span aria-hidden="true">↗</span> в работе <b id="work-count">0</b></button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-label">маленький первый шаг</span><p>один канал.<br>одна полезная идея.<br>один разговор.</p><span class="subtle">сначала выясни задачу,<br>потом предлагай разработку.</span></div>
+    <div class="sidebar-footer"><span class="online-dot"></span> личная база <span>v.01</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span><span class="dim">workspace</span><span class="slash">/</span> telegram outreach</span><span class="topbar-right">исследование <time datetime="2026-11-10">10.11.2026</time><span class="user-avatar">ты</span></span></header>
+    <main id="main">
+      <section class="page-intro" aria-labelledby="page-title">
+        <div><div class="eyebrow"><span class="online-dot"></span> от идеи к первому заказу</div><h1 id="page-title">есть кому предложить.</h1><p class="lead">небольшие telegram-каналы, полезные сервисы<br class="desktop-break"> и готовый повод начать разговор.</p></div>
+        <button id="export" class="button secondary" disabled><span aria-hidden="true">↓</span> скачать базу</button>
+      </section>
+      <section class="metrics" aria-label="состав базы">
+        <div class="metric"><span class="metric-label">всего каналов <span aria-hidden="true">↗</span></span><strong id="total-count">—</strong><span class="metric-caption">идеи для небольших разработок</span></div>
+        <div class="metric"><span class="metric-label">русскоязычные</span><strong id="ru-count">—</strong><span class="metric-caption">первый рынок для старта</span></div>
+        <div class="metric"><span class="metric-label">зарубежные</span><strong id="foreign-count">—</strong><span class="metric-caption">первые сообщения на английском</span></div>
+        <div class="metric progress-metric"><span class="metric-label">первые контакты <span id="contact-percent">0%</span></span><strong id="contact-count">0<span> / —</span></strong><div class="progress-track"><span id="progress-fill"></span></div><span class="metric-caption">отметки сохраняются на этом устройстве</span></div>
+      </section>
+      <details class="method" id="method"><summary><span class="method-icon" aria-hidden="true">i</span><span><b>как отобраны каналы</b><span class="method-preview"> · небольшой размер, открытый контакт, проверка ботов</span></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="method-body"><p>ориентир — 200–10 000 подписчиков; есть несколько более маленьких коммерческих проектов. размер и активность указаны по доступной публичной странице; это снимок источника, а не live-аналитика.</p><p><b>«бот не найден»</b> означает, что его не обнаружили в указанной области проверки. это не доказывает, что скрытого или недавно созданного бота нет. перед первым сообщением открой свежие посты, закреп и ссылки.</p><p>идея услуги — гипотеза по содержанию канала. потребность, бюджет и готовность владельца купить не подтверждены. сообщения можно отредактировать; сайт ничего не отправляет.</p><p>статусы и избранное хранятся в этом браузере. экспортируй базу вместе с отметками, если хочешь сохранить копию.</p></div></details>
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="directory-heading"><h2 id="directory-title">каналы для первого контакта <span id="result-count">—</span></h2><span class="list-hint">конкретная задача → короткий оффер</span></div>
+        <div class="filter-bar">
+          <div class="segments" role="group" aria-label="язык канала"><button data-language="all" class="selected" aria-pressed="true">все <span id="tab-all">—</span></button><button data-language="ru" aria-pressed="false">русские <span id="tab-ru">—</span></button><button data-language="foreign" aria-pressed="false">зарубежные <span id="tab-foreign">—</span></button></div>
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="канал, ниша или услуга" aria-label="поиск по каналу, нише или услуге"></label>
+        </div>
+        <div class="filter-secondary"><label><span class="sr-only">ниша</span><select id="category"><option value="all">все ниши</option><option>образование</option><option>эксперты</option><option>маркетинг</option><option>услуги</option><option>магазины</option></select></label><label><span class="sr-only">статус контакта</span><select id="status-filter"><option value="all">все статусы</option><option value="new">ещё не писал</option><option value="sent">написал</option><option value="replied">ответили</option><option value="skip">не подходит</option></select></label><label class="sort-label"><span>порядок:</span><select id="sort" aria-label="порядок каналов"><option value="priority">по приоритету</option><option value="small">сначала небольшие</option><option value="number">по номеру</option></select></label><button id="reset" class="text-button" hidden>сбросить</button></div>
+        <div class="table-head" aria-hidden="true"><span>канал / аудитория</span><span>что можно предложить</span><span>статус</span><span></span></div>
+        <div id="list" aria-live="polite" aria-busy="true"><div class="loading-state"><span class="loading-line"></span><span class="loading-line"></span><span class="loading-line"></span><p>загружаем каналы…</p></div></div>
+        <div class="directory-footer"><span id="footer-count">загрузка базы</span><a href="#main">наверх ↑</a></div>
+      </section>
+      <footer class="page-footer"><span>signal<span class="brand-dot">.</span> <span class="dim">ручной отбор. осмысленный контакт.</span></span><span>источники и границы проверки — внутри каждой карточки</span></footer>
+      <noscript><p class="error-state">для поиска и карточек включи javascript. <a href="./leads.json">открыть исходную базу</a></p></noscript>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
