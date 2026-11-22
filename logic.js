@@ -6,7 +6,7 @@ export function selectLeads(leads, filters, state) {
     return (filters.language === 'all' || (filters.language === 'ru' ? item.language === 'ru' : item.language !== 'ru'))
       && (filters.category === 'all' || item.category === filters.category)
       && (filters.status === 'all' || (local.status || 'new') === filters.status)
-      && (filters.view === 'all' || (filters.view === 'saved' ? local.saved : ['sent','replied'].includes(local.status)))
+      && (filters.view === 'all' || (filters.view === 'recent' ? item.addedAt === '2026-11-22' : filters.view === 'saved' ? local.saved : ['sent','replied'].includes(local.status)))
       && (!query || [item.name,item.handle,item.category,item.offer,item.description,item.opportunity].join(' ').toLocaleLowerCase('ru').includes(query));
   }).sort((a,b) => filters.sort === 'small' ? (a.members ?? Infinity) - (b.members ?? Infinity) || a.number-b.number : filters.sort === 'priority' ? (a.priority === 'high' ? 0 : 1) - (b.priority === 'high' ? 0 : 1) || a.number-b.number : a.number-b.number);
 }
